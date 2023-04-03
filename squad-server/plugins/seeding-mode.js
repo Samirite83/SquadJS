@@ -97,7 +97,9 @@ export default class SeedingMode extends BasePlugin {
       this.server.a2sPlayerCount !== 0 &&
       this.options.liveEnabled &&
       this.server.a2sPlayerCount < this.options.liveThreshold
-    )
+    ) {
+      this.server.emit('GO_LIVE', null);
       await this.server.rcon.broadcast(this.options.liveMessage);
+    }
   }
 }

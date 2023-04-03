@@ -894,6 +894,33 @@ Grafana:
            <pre><code>randomize</code></pre></li></ul>
         </details>
 
+<details>
+          <summary>ZgegLog</summary>
+          <h2>ZgegLog</h2>
+          <p>Description </p>
+          <h3>Options</h3>
+          <ul><li><h4>strapi (Required)</h4>
+           <h6>Description</h6>
+           <p>The strapi connector to store into CMS database.</p>
+           <h6>Default</h6>
+           <pre><code>strapi</code></pre></li>
+<li><h4>liveThreshold</h4>
+           <h6>Description</h6>
+           <p>Player count required for "Live" status to start update players stats</p>
+           <h6>Default</h6>
+           <pre><code>50</code></pre></li>
+<li><h4>notLiveCount</h4>
+           <h6>Description</h6>
+           <p>If true, stats will also update on seed / when not live</p>
+           <h6>Default</h6>
+           <pre><code>false</code></pre></li>
+<li><h4>seedMap</h4>
+           <h6>Description</h6>
+           <p>Seeding map</p>
+           <h6>Default</h6>
+           <pre><code>Sumari_Seed_v2</code></pre></li></ul>
+        </details>
+
 <br>
 
 ## Statement on Accuracy

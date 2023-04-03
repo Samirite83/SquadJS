@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url';
 import Discord from 'discord.js';
 import sequelize from 'sequelize';
 import AwnAPI from './utils/awn-api.js';
+import Strapi from 'strapi-sdk-js';
 
 import Logger from 'core/logger';
 
@@ -136,6 +137,18 @@ export default class SquadServerFactory {
       const awn = new AwnAPI(connectorConfig);
       await awn.auth(connectorConfig);
       return awn;
+    }
+
+    if (type === 'strapi') {
+      return new Strapi({
+        url: connectorConfig.url,
+        axiosOptions: {
+          headers: {
+            Authorization: `Bearer ${connectorConfig.apiToken}`,
+            'content-type': 'application/json'
+          }
+        }
+      });
     }
 
     throw new Error(`${type.connector} is an unsupported connector type.`);

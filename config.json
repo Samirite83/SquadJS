@@ -239,6 +239,14 @@
       "plugin": "TeamRandomizer",
       "enabled": true,
       "command": "randomize"
+    },
+    {
+      "plugin": "ZgegLog",
+      "enabled": false,
+      "strapi": "strapi",
+      "liveThreshold": 50,
+      "notLiveCount": false,
+      "seedMap": "Sumari_Seed_v2"
     }
   ],
   "logger": {
